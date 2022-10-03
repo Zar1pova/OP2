@@ -4,7 +4,7 @@
 * Problem Set 1 Task 03
 */
 import java.util.Scanner;
-public class Main {
+public class Task03PS1 {
     public static void main(String[] args) {
         int m;
         Scanner sc = new Scanner(System.in);
