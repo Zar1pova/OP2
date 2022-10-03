@@ -1,3 +1,8 @@
+/**
+* @author Dina Zaripova
+* 01-961
+* Problem Set 1 Task 06
+*/
 import java.util.Random;
 import java.util.Scanner;
 public class Task06PS1 {
