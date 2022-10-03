@@ -2,6 +2,7 @@
 * @author Dina Zaripova
 * 01-961
 * Problem Set 1 Task 05 
+*/
 import java.util.Scanner;
 public class Task05PS1 {
     public static void main(String[] args) {
