@@ -1,3 +1,9 @@
+/**
+* @author Dina Zaripova
+* 01-961
+* heapsort
+*/
+
 import java.util.Scanner;
 import java.util.Random;
 public class PSAlg {
