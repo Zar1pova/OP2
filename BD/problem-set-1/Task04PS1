@@ -1,7 +1,7 @@
 /*
 Dina Zaripova
 01-961
-Problem Set 1 Task 03
+Problem Set 1 Task 04
 */
 CREATE TYPE gen AS ENUM ('f', 'm');
 CREATE TABLE students (
