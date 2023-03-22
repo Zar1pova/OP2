@@ -1,0 +1,71 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 1 Task 03
+*/
+CREATE TYPE gen AS ENUM ('f', 'm');
+CREATE TABLE students (
+	fio varchar(32),
+	gender gen, 
+	dateofbirth date,
+	groupnumber varchar(6)
+);
+INSERT INTO students VALUES 
+('Бурков Владимир', 'm', '2001-11-16', '01-961'),
+('Гаппоев Рамазан', 'm', '2001-10-12', '01-961'),
+('Зарипова Дина', 'f', '2001-10-12', '01-961');
+SELECT * FROM students;
+ALTER TABLE students
+	ADD COLUMN id serial;
+SELECT * FROM students;
+ALTER TABLE students DROP COLUMN groupnumber;
+SELECT * FROM students;
+CREATE TABLE groupnum (
+	id int,
+	groupnumber int
+);
+ALTER TABLE students
+	ADD COLUMN group_id int;
+INSERT INTO groupnum VALUES 
+(1, 01961),
+(2, 01951);
+SELECT * FROM groupnum;
+UPDATE students SET group_id = 1 WHERE id < 4;
+INSERT INTO students VALUES 
+('Габдулла Тукай', 'm', '1886-04-26'),
+('Муса Джалиль', 'm', '1906-02-15'),
+('Адель Кутуй', 'm', '1903-11-28'),
+('Чулпан Хаматова', 'f', '1975-10-01'),
+('Алина Загитова', 'f', '2002-05-18');
+UPDATE students SET group_id = 2 WHERE id >3;
+SELECT * FROM students;
+INSERT INTO groupnum VALUES 
+(2, 01911);
+INSERT INTO students VALUES 
+('Юдзуру Ханю', 'm', '1994-12-07'),
+('Сёма Ун', 'm', '1997-12-17');
+UPDATE students SET group_id = 3 WHERE id >8;
+SELECT * FROM students;
+
+UPDATE students
+SET group_id = 1
+WHERE gender = 'f';
+UPDATE students
+SET group_id = 2
+WHERE gender = 'm';
+SELECT * FROM students;
+ALTER TABLE students DROP COLUMN group_id;
+ALTER TABLE groupnum DROP COLUMN groupnumber;
+ALTER TABLE groupnum DROP COLUMN id;
+ALTER TABLE students
+	ADD COLUMN group_dateofbirth int;
+UPDATE students
+SET group_dateofbirth = 1
+where dateofbirth < '1950-01-01';
+UPDATE students
+SET group_dateofbirth = 2
+where dateofbirth < '2000-01-01';
+UPDATE students
+SET group_dateofbirth = 3
+where dateofbirth > '2000-01-01';
+SELECT * FROM students;
