@@ -1,0 +1,29 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 1 Task 01
+*/
+
+CREATE TYPE gen AS ENUM ('f', 'm');
+CREATE TABLE students (
+	fio varchar(32),
+	gender gen, 
+	dateofbirth date,
+	groupnumber varchar(6)
+);
+INSERT INTO students VALUES 
+('Бурков Владимир', 'm', '2001-11-16', '01-961'),
+('Гаппоев Рамазан', 'm', '2001-10-12', '01-961'),
+('Зарипова Дина', 'f', '2001-10-12', '01-961');
+INSERT INTO students VALUES 
+('Бурков Владимир', 'm', '2001-11-16', '01-961'),
+('Гаппоев Рамазан', 'm', '2001-10-12', '01-961'),
+('Зарипова Дина', 'f', '2001-10-12', '01-961'),
+('Гаппоев Рамазан', 'm', '2001-10-12', '01-961'),
+('Зарипова Дина', 'f', '2001-10-12', '01-961');
+SELECT * FROM students;
+ALTER TABLE students
+	ADD COLUMN id serial;
+SELECT * FROM students;
+DELETE FROM students WHERE id > 3;
+SELECT * FROM students;
