@@ -13,7 +13,7 @@ SET occupation = 'student'
 where dateofbirth > '2000-01-01';
 UPDATE students
 SET occupation = 'figure_skater'
-where fio = 'Сёма Ун' OR fio ='Юдзуру Ханю' OR fio ='Алина Загитова';
+where fio = 'Сёма Уно' OR fio ='Юдзуру Ханю' OR fio ='Алина Загитова';
 UPDATE students
 SET occupation = 'actress'
 where fio = 'Чулпан Хаматова';
