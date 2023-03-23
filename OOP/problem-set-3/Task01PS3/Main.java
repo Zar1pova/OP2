@@ -1,3 +1,8 @@
+/**
+ * @author Dina Zaripova
+ * 01-961
+ * Problem Set 3 Task 01 
+ */
 public class Main {
     public static void main(String[] args) {
         double z = 12;
