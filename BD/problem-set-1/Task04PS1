@@ -9,11 +9,11 @@ ALTER TABLE groupnum DROP COLUMN id;
 ALTER TABLE students
 	ADD COLUMN group_dateofbirth int;
 UPDATE students
-SET group_dateofbirth = 1
-where dateofbirth < '1950-01-01';
-UPDATE students
 SET group_dateofbirth = 2
 where dateofbirth < '2000-01-01';
+UPDATE students
+SET group_dateofbirth = 1
+where dateofbirth < '1950-01-01';
 UPDATE students
 SET group_dateofbirth = 3
 where dateofbirth > '2000-01-01';
