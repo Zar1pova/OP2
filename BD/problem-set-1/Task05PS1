@@ -1,0 +1,23 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 1 Task 05
+*/
+ALTER TABLE students drop column group_dateofbirth;
+ALTER TABLE students add column occupation varchar;
+UPDATE students
+SET occupation = 'author'
+where dateofbirth < '1950-01-01';
+UPDATE students
+SET occupation = 'student'
+where dateofbirth > '2000-01-01';
+UPDATE students
+SET occupation = 'figure_skater'
+where fio = 'Сёма Ун' OR fio ='Юдзуру Ханю' OR fio ='Алина Загитова';
+UPDATE students
+SET occupation = 'actress'
+where fio = 'Чулпан Хаматова';
+SELECT * FROM students;
+DELETE FROM students
+WHERE dateofbirth < '1999-01-01';
+SELECT * FROM students;
