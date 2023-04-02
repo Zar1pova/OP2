@@ -1,0 +1,25 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 2 Task 01
+*/
+CREATE TABLE student (
+	id serial,
+	fio varchar(32) UNIQUE,
+	dateofbirth date,
+	groupnumber varchar(6)
+);
+CREATE TABLE elective (
+	id serial,
+	elective_name varchar(32),
+	description text
+);
+CREATE TABLE elective_score (
+	student_id int REFERENCES student (id),
+	elective_id int REFERENCES elective (id),
+	mark int
+);
+CREATE TABLE groups (
+	id serial,
+	groupnum varchar(6)
+);
