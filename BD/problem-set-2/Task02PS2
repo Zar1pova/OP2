@@ -1,0 +1,10 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 2 Task 02
+*/
+ALTER TABLE student ALTER COLUMN fio SET NOT NULL;
+ALTER TABLE student ALTER COLUMN groupnumber SET NOT NULL;
+ALTER TABLE elective ALTER COLUMN elective_name SET NOT NULL;
+ALTER TABLE elective ALTER COLUMN elective_name SET NOT NULL;
+ALTER TABLE elective_score ALTER COLUMN mark SET NOT NULL;
