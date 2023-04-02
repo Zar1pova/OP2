@@ -1,0 +1,10 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 2 Task 04
+*/
+ALTER TABLE student ADD PRIMARY KEY (id);
+ALTER TABLE elective ADD PRIMARY KEY (id);
+ALTER TABLE groups ADD PRIMARY KEY (id);
+ALTER TABLE elective_score
+ADD CONSTRAINT scorePK_constraint PRIMARY KEY (student_id, elective_id, mark);
