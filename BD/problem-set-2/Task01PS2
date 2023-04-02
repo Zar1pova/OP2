@@ -4,13 +4,13 @@ Dina Zaripova
 Problem Set 2 Task 01
 */
 CREATE TABLE student (
-	id serial,
+	id serial UNIQUE,
 	fio varchar(32) UNIQUE,
 	dateofbirth date,
-	groupnumber varchar(6)
+	groupnumber varchar(6) UNIQUE
 );
 CREATE TABLE elective (
-	id serial,
+	id serial UNIQUE,
 	elective_name varchar(32),
 	description text
 );
