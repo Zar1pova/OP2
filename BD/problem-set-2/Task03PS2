@@ -1,0 +1,11 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 2 Task 03
+*/
+ALTER TABLE elective
+ADD CONSTRAINT elective_constraint UNIQUE (elective_name);
+ALTER TABLE groups
+ADD CONSTRAINT groups_constraint UNIQUE (groupnum);
+ALTER TABLE elective_score
+ADD CONSTRAINT score_constraint UNIQUE (student_id, elective_id, mark);
