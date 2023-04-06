@@ -1,0 +1,7 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 2 Task 07
+*/
+ALTER TABLE elective_score
+ADD CHECK (mark>=2 and mark<=5);
