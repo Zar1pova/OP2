@@ -1,0 +1,9 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 2 Task 06
+*/
+ALTER TABLE student  
+  ADD FOREIGN KEY (id) REFERENCES groups  (ID);
+ALTER TABLE student  
+  ADD FOREIGN KEY (id) REFERENCES elective (id);
