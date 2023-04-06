@@ -1,0 +1,6 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 2 Task 05
+*/
+ALTER TABLE groups ALTER COLUMN groupnum SET NOT NULL;
