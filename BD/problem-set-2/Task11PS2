@@ -1,0 +1,19 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 2 Task 11
+*/
+INSERT INTO elective (elective_name, description) VALUES 
+('aaa', 'vvvvv'),
+('bbb', 'zzzzz');
+INSERT INTO student (fio, dateofbirth, groupnumber, score, formofeducation, scholarship) VALUES 
+('asdf', '2005-10-17', '01-961', '99', 'бюджет', 'повышенная'),
+('zxcv', '2001-10-12', '01-951', '15', 'бюджет', 'повышенная'),
+('qwer', '2000-01-19', '01-941', '99', 'контракт', '');
+INSERT INTO groups (groupnum )VALUES
+('01-961'),
+('01-951'),
+('01-941'),
+('01-931'),
+('01-921'),
+('01-911');
