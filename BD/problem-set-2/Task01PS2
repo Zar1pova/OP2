@@ -7,7 +7,7 @@ CREATE TABLE student (
 	id serial UNIQUE,
 	fio varchar(32) UNIQUE,
 	dateofbirth date,
-	groupnumber varchar(6) UNIQUE
+	groupnumber varchar(6)
 );
 CREATE TABLE elective (
 	id serial UNIQUE,
@@ -23,3 +23,9 @@ CREATE TABLE groups (
 	id serial,
 	groupnum varchar(6)
 );
+ALTER TABLE elective
+ADD CONSTRAINT elective_constraint UNIQUE (elective_name);
+ALTER TABLE groups
+ADD CONSTRAINT groups_constraint UNIQUE (groupnum);
+ALTER TABLE elective_score
+ADD CONSTRAINT score_constraint UNIQUE (student_id, elective_id, mark);
