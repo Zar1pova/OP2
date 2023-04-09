@@ -1,0 +1,8 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 2 Task 10
+*/
+CREATE TYPE education AS ENUM ('бюджет', 'контракт');
+ALTER TABLE student ADD COLUMN formofeducation education;
+ALTER TABLE student ADD COLUMN scholarship text;
