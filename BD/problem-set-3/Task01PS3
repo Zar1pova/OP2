@@ -1,0 +1,8 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 3 Task 01
+*/
+SELECT * FROM student;
+SELECT fio, dateofbirth FROM student WHERE formofeducation = 'бюджет';
+SELECT fio FROM student WHERE formofeducation = 'бюджет' AND dateofbirth > '2000-01-01';
