@@ -1,0 +1,7 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 2 Task 09
+*/
+ALTER TABLE student
+ADD CHECK (dateofbirth < '2006-04-09');
