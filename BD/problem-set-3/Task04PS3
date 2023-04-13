@@ -1,0 +1,13 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 3 Task 4
+*/
+SELECT COUNT(id), formofeducation FROM student
+GROUP by formofeducation;
+
+SELECT COUNT(id), gender FROM student
+GROUP by gender;
+
+SELECT COUNT(id), dateofbirth FROM student WHERE dateofbirth > '2000-01-01'
+GROUP by dateofbirth;
