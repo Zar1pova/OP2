@@ -3,6 +3,5 @@ Dina Zaripova
 01-961
 Problem Set 2 Task 08
 */
-ALTER TABLE student ADD COLUMN score int;
-ALTER TABLE student
-ADD CHECK (score>=1 and score<=100);
+CREATE DOMAIN score AS int
+CHECK (value >= 0 AND value <= 100);
