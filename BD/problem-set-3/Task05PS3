@@ -1,0 +1,18 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 3 Task 05
+*/
+SELECT AVG(elective_score.score) AS avg_scrore, AVG(elective_score.mark) AS avg_mark FROM elective_score
+JOIN student on elective_score.student_id = student.id
+GROUP BY formofeducation;
+
+SELECT COUNT (student.id) FROM student
+JOIN elective_score ON student_id = elective_score.student_id
+WHERE student.formofeducation = 'бюджет'
+GROUP BY elective_score.elective_id;
+
+SELECT COUNT (student.id) FROM student
+JOIN elective_score ON student_id = elective_score.student_id
+WHERE student.dateofbirth > '2000-01-01'
+GROUP BY elective_score.elective_id;
