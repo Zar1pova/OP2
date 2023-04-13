@@ -6,3 +6,5 @@ Problem Set 2 Task 10
 CREATE TYPE education AS ENUM ('бюджет', 'контракт');
 ALTER TABLE student ADD COLUMN formofeducation education;
 ALTER TABLE student ADD COLUMN scholarship text;
+ALTER TABLE student
+ADD CHECK (CASE WHEN formofeducation = 'бюджет' THEN scholarship = '0' END);
