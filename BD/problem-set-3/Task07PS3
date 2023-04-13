@@ -14,3 +14,9 @@ JOIN student on elective.id = student.elective_id
 JOIN groups ON student.group_id = groups.id
 GROUP BY elective_name
 HAVING AVG(student.scholarship) >= '2500';
+
+SELECT formofeducation FROM student 
+JOIN elective on elective.id = student.elective_id 
+JOIN groups ON student.group_id = groups.id WHERE student.groupnumber = '01-951'
+GROUP BY formofeducation 
+HAVING student.formofeducation = 'контракт' AND AVG(student.score) >= '74';
