@@ -1,0 +1,20 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 3 Task 2
+*/
+ALTER TABLE student add COLUMN group_id int;
+delete from student;
+INSERT INTO student (fio, dateofbirth, group_id, groupnumber, formofeducation, scholarship) VALUES 
+('kkkk', '2002-10-17', '1', '01-961', 'бюджет', '2300'),
+('mmmm', '2001-10-12', '2', '01-951', 'бюджет', '2300'),
+('nnnn', '2000-01-19', '3', '01-941', 'контракт', '');
+INSERT INTO groups (groupnum) VALUES
+('01-941');
+
+SELECT * FROM student
+JOIN groups ON student.group_id = groups.id;
+
+SELECT student.fio, groupnumber FROM student
+JOIN groups ON student.group_id = groups.id
+WHERE groupnum = '01-961'
