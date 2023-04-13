@@ -1,0 +1,21 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 3 Task 06
+*/
+SELECT AVG(elective_score.score) AS avg_scrore, AVG(elective_score.mark) AS avg_mark FROM elective_score
+JOIN student on elective_score.student_id = student.id
+JOIN groups ON student.group_id = groups.id
+GROUP BY student.groupnumber;
+
+SELECT COUNT(student.id), groupnumber FROM student
+JOIN elective_score on student.id = elective_score.student_id
+JOIN groups ON student.group_id = groups.id
+WHERE score > '56' AND formofeducation = 'бюджет'
+GROUP by student.groupnumber;
+
+SELECT COUNT(elective.id), elective_name FROM elective
+JOIN student on student.elective_id = elective.id
+JOIN groups ON student.group_id = groups.id
+WHERE formofeducation = 'бюджет'
+GROUP by elective_name;
