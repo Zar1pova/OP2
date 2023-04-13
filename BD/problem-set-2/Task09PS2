@@ -4,4 +4,4 @@ Dina Zaripova
 Problem Set 2 Task 09
 */
 ALTER TABLE student
-ADD CHECK (dateofbirth < '2006-04-09');
+ADD CHECK (dateofbirth < (CURRENT_DATE - INTERVAL '18' YEAR));
