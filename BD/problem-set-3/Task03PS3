@@ -1,0 +1,23 @@
+/*
+Dina Zaripova
+01-961
+Problem Set 3 Task 03
+*/
+delete from student;
+ALTER TABLE student add COLUMN elective_id int;
+INSERT INTO student (fio, dateofbirth, group_id, groupnumber, formofeducation, scholarship, elective_id) VALUES 
+('aaaa', '2002-10-17', '1', '01-951', 'бюджет', '2300', '3'),
+('bbbb', '2001-10-12', '2', '01-951', 'бюджет', '2300', '3'),
+('cccc', '2000-01-19', '3', '01-951', 'контракт', '', '3');
+INSERT INTO elective (elective_name, description) VALUES 
+('ccccc', 'ggggggg');
+
+
+SELECT * FROM student
+JOIN groups ON student.group_id = groups.id
+JOIN elective ON student.elective_id = elective.id;
+
+SELECT fio FROM student
+JOIN groups ON student.group_id = groups.id
+JOIN elective ON student.elective_id = elective.id
+WHERE groupnumber = '01-951' AND elective_id = 3;
