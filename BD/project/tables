@@ -1,0 +1,34 @@
+CREATE TABLE diagnosis (
+	id serial PRIMARY KEY,
+	name_of_diagnosis varchar(128) UNIQUE NOT NULL
+);
+CREATE TABLE doctor (
+	id serial PRIMARY KEY,
+	doctor_fio varchar(128) UNIQUE NOT NULL
+);
+CREATE TABLE treatment (
+	id serial PRIMARY KEY,
+	treatment_name varchar(128) UNIQUE NOT NULL,
+	price int CHECK (price >= 0 AND price <= 10000)
+);
+CREATE TABLE clinic_branch (
+	id serial PRIMARY KEY,
+	clinic varchar(128) UNIQUE NOT NULL
+);
+CREATE TYPE gen AS ENUM ('f', 'm');
+CREATE TABLE patient (
+	id serial PRIMARY KEY,
+	fio varchar(128) NOT NULL,
+	gender gen, 
+	birthdate date CHECK (birthdate < (CURRENT_DATE - INTERVAL '18' YEAR)),
+	date_of_application date NOT NULL, 
+	diagnosis_id Integer,
+	treatment_id Integer,
+	doctor_id Integer,
+	clinic_id Integer,
+	FOREIGN KEY (diagnosis_id) REFERENCES diagnosis (id),
+	FOREIGN KEY (treatment_id) REFERENCES treatment (id),
+	FOREIGN KEY (doctor_id) REFERENCES doctor (id),
+	FOREIGN KEY (clinic_id) REFERENCES clinic_branch (id),
+	CONSTRAINT date_check check(date_of_application > birthdate)
+);
