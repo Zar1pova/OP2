@@ -32,3 +32,35 @@ CREATE TABLE patient (
 	FOREIGN KEY (clinic_id) REFERENCES clinic_branch (id),
 	CONSTRAINT date_check check(date_of_application > birthdate)
 );
+INSERT INTO diagnosis (name_of_diagnosis) VALUES 
+('Невралгия'),
+('Перелом'),
+('Стенокардия'),
+('ЖДА');
+INSERT INTO treatment (treatment_name, price) VALUES 
+('Массаж', '2000'),
+('Наложение гипса', '700'),
+('Нитроглицерин', '250'),
+('Ферретаб', '900');
+INSERT INTO doctor (doctor_fio) VALUES 
+('Киселева К В'),
+('Курмаев А А'),
+('Попова Л Т');
+INSERT INTO clinic_branch (clinic) VALUES 
+('Айболит на Зур Урам'),
+('Айболит на Проспекте Победы'),
+('Айболит на Курской'),
+('Айболит на Чуйкова'),
+('Айболит на Меридианной');
+INSERT INTO patient (fio, gender, birthdate, date_of_application, diagnosis_id, treatment_id, doctor_id, clinic_id) VALUES 
+('Иванова А А', 'f', '2000-01-01', '2022-01-01', '2', '2', '1', '2'),
+('Петров  В Б', 'm', '1990-09-08', '2022-01-10', '3', '3', '2', '3'),
+('Серова Д М', 'f', '1975-05-05', '2023-07-11', '4', '4', '1', '3'),
+('Бобров К Л', 'm', '1999-01-01', '2023-07-12', '1', '1', '3', '1'),
+('Волкова С В', 'f', '1998-03-14', '2023-07-13', '2', '2', '2', '4');
+SELECT * FROM patient
+JOIN diagnosis ON patient.diagnosis_id = diagnosis.id;
+SELECT * FROM patient
+JOIN diagnosis ON patient.diagnosis_id = diagnosis.id
+JOIN treatment ON patient.treatment_id = treatment.id
+WHERE gender = 'm';
