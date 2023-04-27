@@ -64,3 +64,6 @@ SELECT * FROM patient
 JOIN diagnosis ON patient.diagnosis_id = diagnosis.id
 JOIN treatment ON patient.treatment_id = treatment.id
 WHERE gender = 'm';
+ALTER TABLE patient ALTER COLUMN birthdate TYPE varchar(10);
+ALTER TABLE patient ALTER COLUMN date_of_application TYPE varchar(10);
+select * from patient;
