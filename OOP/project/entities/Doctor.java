@@ -10,7 +10,6 @@ public class Doctor {
     }
 
     public Doctor() {
-
     }
 
     public int getId() {
